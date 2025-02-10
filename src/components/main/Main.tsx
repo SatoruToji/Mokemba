@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { Exercise } from '../UI/exercise/Exercise'
 
-var start: {content: ReactNode} = {
+const start: {content: ReactNode} = {
     content: (
         <>
             <h1>куколд это плохо</h1>
