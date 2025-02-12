@@ -1,10 +1,7 @@
-'use client'
 import { Button } from '@/components/shared/button/Button'
 import Link from 'next/link'
-import { useState } from 'react'
 
 export function Navbar() {
-    const [isOpen, setIsOpen] = useState(false)
     return (
         <nav>
             <ul className="flex gap-x-10">
@@ -34,6 +31,14 @@ export function Navbar() {
                             </div>
                         }
                     />
+                </li>
+                <li>
+                    <a
+                        href="https://github.com/SatoruToji/Mokemba"
+                        target="_blank"
+                    >
+                        GitHub
+                    </a>
                 </li>
             </ul>
         </nav>
