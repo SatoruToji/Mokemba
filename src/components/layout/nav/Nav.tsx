@@ -1,7 +1,7 @@
 import { Button } from '@/components/shared/button/Button'
 import Link from 'next/link'
 
-export function Navbar() {
+export function Nav() {
     return (
         <nav>
             <ul className="flex gap-x-10">
