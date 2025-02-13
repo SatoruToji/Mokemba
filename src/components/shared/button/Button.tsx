@@ -25,7 +25,7 @@ export function Button({ value, style, tooltip, details }: ButtonProps) {
                         ? 'w-20 aspect-square bg-foreground text-white hover:bg-grey'
                         : ''
                 }
-            ${style?.nav ? 'hover:text-grey' : ''}`}
+            ${style?.nav ? 'hover:text-grey' : ''} hover:rounded-sm`}
                 onClick={() => setShow((p) => ({ ...p, details: !p.details }))}
                 onMouseEnter={() => setShow((p) => ({ ...p, tooltip: true }))}
                 onMouseLeave={() => setShow((p) => ({ ...p, tooltip: false }))}

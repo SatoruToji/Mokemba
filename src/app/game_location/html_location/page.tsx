@@ -6,14 +6,14 @@ export default function Page() {
     return (
         <PageLayout nav={true} style={{ html: true }}>
             <main>
-                <Link href="">
-                    <Button value="Заголовки" style={{ main: true }} />
+                <Link href="./html_location/base">
+                    <Button value="Base" style={{ main: true }} tooltip='Механики, которые ты обязан(а) знать'/>
                 </Link>
                 <Link href="">
-                    <Button value="img" style={{ main: true }} />
+                    <Button value="<a>" style={{ main: true }} tooltip='Сылки'/>
                 </Link>
                 <Link href="">
-                    <Button value="links" style={{ main: true }} />
+                    <Button value="<div>" style={{ main: true }} tooltip='Универсальный тег!'/>
                 </Link>
                 <Link href="">
                     <Button value="ul/li" style={{ main: true }} />

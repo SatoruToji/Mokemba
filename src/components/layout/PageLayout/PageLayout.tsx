@@ -15,7 +15,7 @@ export function PageLayout({ children, nav, style }: children) {
     return (
         <div
             className={`min-h-screen grid grid-rows-[10%_80%_10%] ${
-                style?.html ? 'bg-orange-400' : ''
+                style?.html ? 'bg-orange-200' : ''
             }`}
         >
             <Header>{nav ? <Nav /> : undefined}</Header>
