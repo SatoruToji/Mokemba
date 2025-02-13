@@ -9,11 +9,10 @@ interface MokembaDialogProProps {
 export function MokembaDialogPro({ childhood }: MokembaDialogProProps) {
     const [value, setValue] = useState('')
     useEffect(() => {
-        let costil = ''
         childhood.map((item) => {
             for (const [key, value] of Object.entries(item)) {
                 setValue(value)
-                costil = key
+                console.log('на меня vercel ругается, так что инициализирую костыль в консоле:', key)
             }
         })
     }, [childhood])
