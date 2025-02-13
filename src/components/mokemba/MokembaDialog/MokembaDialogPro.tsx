@@ -7,11 +7,13 @@ interface MokembaDialogProProps {
 }
 
 export function MokembaDialogPro({ childhood }: MokembaDialogProProps) {
-    let [value, setValue] = useState('')
+    const [value, setValue] = useState('')
     useEffect(() => {
+        let costil = ''
         childhood.map((item) => {
             for (const [key, value] of Object.entries(item)) {
                 setValue(value)
+                costil = key
             }
         })
     }, [childhood])
