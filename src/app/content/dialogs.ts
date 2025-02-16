@@ -21,7 +21,13 @@ export const base: Record<string, string>[] = [
 export const base2: Record<string, string>[] = [
     {
         phrase1: 'Привет!',
-        phrase2: 'Рад тебя видеть'
+
     },
-    
+    {
+        phrase2: 'Рад тебя видеть',
+        
+    },
+    {
+        phrase3: 'тестик три'
+    },    
 ]

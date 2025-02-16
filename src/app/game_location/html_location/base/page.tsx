@@ -1,14 +1,14 @@
 'use client'
 import Image from 'next/image'
-import hello from '@/components/mokemba/MokembaMascot/hello.png'
+import Potok from '@/components/mokemba/MokembaMascot/v potoke.png'
 import { PageLayout } from '@/components/layout/PageLayout/PageLayout'
+import { base2 } from '@/app/content/dialogs'
+import { MokembaClick } from '@/components/mokemba/MokembaDialog/MokembaClick'
 
 export default function Page() {
-
     return (
         <PageLayout style={{ html: true }}>
-            <Image src={hello} width={400} alt='privet'></Image>
-            
+            <MokembaClick arrayObjects={base2} />
         </PageLayout>
     )
 }
