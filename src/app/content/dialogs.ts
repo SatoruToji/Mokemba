@@ -1,33 +1,16 @@
-export const h1ez = 'Рад тебя видеть [username]. Итак, прежде чем ты будешь учить на изусть теги (не волнуйся, это не трудно), нам предстоит усвоить интуитивно понятные правила HTML, а также настроим IDE под себя '
-export const base: Record<string, string>[] = [
+export const testDialog: Record<string, string>[] = [
     {
-        one: 'one',
-        two: 'two',
-        three: 'three',
-        four: 'four',
-        five: 'five',
-        six: 'six'
-    },
-    {
-        one: 'one',
-        two: 'two',
-        three: 'three',
-        four: 'four',
-        five: 'five',
-        six: 'six'
-    }
-]
-
-export const base2: Record<string, string>[] = [
-    {
-        phrase1: 'Привет!',
+        '/MokembaMascot/hello.png': 'Привет!',
 
     },
     {
-        phrase2: 'Рад тебя видеть',
+        '/MokembaMascot/v potoke.png': 'Рад тебя видеть',
         
     },
     {
-        phrase3: 'тестик три'
+        '/MokembaMascot/hello.png': 'Тестик 3, раз раз?'
+    },
+    {
+        '/MokembaMascot/v potoke.png': 'ну... я доделал это алгоритм более менее только спустя 5 дней...'
     },    
 ]

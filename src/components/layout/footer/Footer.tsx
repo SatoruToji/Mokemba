@@ -1,15 +1,9 @@
 'use client'
-import { base2 } from '@/app/content/dialogs'
-import { MokembaClick } from '@/components/mokemba/MokembaDialog/MokembaClick'
-import { MokembaTalking } from '@/components/mokemba/MokembaDialog/MokembaTalking'
-import { ReactNode } from 'react'
 
 interface Props {
-    text?: any
-    childred?: ReactNode
+    text?: string
 }
 
 export function Footer({ text }: Props) {
-    return <footer>
-    </footer>
+    return <footer>{text}</footer>
 }
