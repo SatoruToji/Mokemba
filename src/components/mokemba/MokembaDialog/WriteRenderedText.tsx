@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react'
 
 interface Props {
-    arrContent: Record<string, string>[]
+    arrContent: Record<string, string>
 }
 
-export function WriteRenderedText({ arrContent = [] }: Props) {
+export function WriteRenderedText({ arrContent }: Props) {
     const [value, setValue] = useState<string>('')
     const [count, setCount] = useState(0)
 
     useEffect(() => {
-        setValue(Object.entries(arrContent)[0][1])
+        const test = JSON.stringify(Object.entries(arrContent)[0][1])
+        setValue(test)
 
         if (count < value.length) {
             const timeout = setTimeout(() => setCount(1 + count), 30)

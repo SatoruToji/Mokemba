@@ -5,18 +5,16 @@ import { WriteRenderedText } from './WriteRenderedText'
 import { SetPicture } from './SetPicture'
 
 interface Props {
-    arrObject?: Record<string, string>[]
+    arrObject: Record<string, string>[] 
 }
 
-export function MokembaClick({ arrObject = [] }: Props) {
+export function MokembaClick({ arrObject }: Props) {
     const [data, setData] = useState({
         index: 0,
         key: 0,
     })
 
     function filter() {
-        if (!arrObject.length) return // Проверка на пустоту массива
-
         setData((p) => ({
             ...p,
             index: (p.index + 1) % arrObject.length,
@@ -30,7 +28,7 @@ export function MokembaClick({ arrObject = [] }: Props) {
         <button onClick={filter}>
             {currentContent && (
                 <>
-                    <SetPicture arrContent={currentContent} />
+                    <SetPicture arrContent={arrObject[data.index]} />
                     <WriteRenderedText
                         arrContent={currentContent}
                         key={data.key}

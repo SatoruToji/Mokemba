@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 interface Props {
-    arrContent?: Record<string, string>[] 
+    arrContent: Record<string, string>
 }
 
 export function SetPicture({ arrContent }: Props) {
