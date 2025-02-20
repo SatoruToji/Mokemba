@@ -1,6 +1,7 @@
 import { Footer } from '@/components/layout/footer/Footer'
 import { Header } from '@/components/layout/header/Header'
 import { Nav } from '@/components/layout/nav/Nav'
+import { MyProvider } from '@/components/mokemba/Provider'
 import { ReactNode } from 'react'
 
 interface children {
@@ -18,9 +19,11 @@ export function PageLayout({ children, nav, style }: children) {
                 style?.html ? 'bg-orange-200' : ''
             }`}
         >
-            <Header>{nav ? <Nav /> : undefined}</Header>
-            <main>{children}</main>
-            <Footer />
+            <MyProvider>
+                <Header>{nav ? <Nav /> : undefined}</Header>
+                <main>{children}</main>
+                <Footer />
+            </MyProvider>
         </div>
     )
 }

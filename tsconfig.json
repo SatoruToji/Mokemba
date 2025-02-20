@@ -29,6 +29,6 @@
         ".next/types/**/*.ts",
         "src/components/layout/main/Main.tsx",
         "src/components/shared/button/Button.tsx"
-    ],
+, "src/components/mokemba/Provider.tsx"    ],
     "exclude": ["node_modules"]
 }

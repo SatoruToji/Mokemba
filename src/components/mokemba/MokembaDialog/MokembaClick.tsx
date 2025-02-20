@@ -1,14 +1,26 @@
 'use client'
 
-import { useState } from 'react'
-import { WriteRenderedText } from './WriteRenderedText'
+import {
+    Dispatch,
+    SetStateAction,
+    useContext,
+    useEffect,
+    useState,
+} from 'react'
 import { SetPicture } from './SetPicture'
+import { myContext } from '../Provider'
 
 interface Props {
-    arrObject: Record<string, string>[] 
+    arrObject: Record<string, string>[]
+}
+
+interface stateContext {
+    state: Record<string, string>
+    setState: Dispatch<SetStateAction<Record<string, string>>>
 }
 
 export function MokembaClick({ arrObject }: Props) {
+    const { setState } = useContext<stateContext>(myContext)
     const [data, setData] = useState({
         index: 0,
         key: 0,
@@ -22,19 +34,13 @@ export function MokembaClick({ arrObject }: Props) {
         }))
     }
 
-    const currentContent = arrObject.length > 0 ? arrObject[data.index] : null
+    useEffect(() => {
+        setState(arrObject[data.index])
+    }, [data.index, setState, arrObject])
 
     return (
         <button onClick={filter}>
-            {currentContent && (
-                <>
-                    <SetPicture arrContent={arrObject[data.index]} />
-                    <WriteRenderedText
-                        arrContent={currentContent}
-                        key={data.key}
-                    />
-                </>
-            )}
+            <SetPicture arrContent={arrObject[data.index]} />
         </button>
     )
 }

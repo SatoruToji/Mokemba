@@ -3,10 +3,10 @@ export const testDialog: Record<string, string>[] = [
         '/MokembaMascot/hello.png': 'Привет!',
     },
     {
-        '/MokembaMascot/vpotoke.png': 'Рад тебя видеть',
+        '/MokembaMascot/vpotoke.png': 'И прямо сейчас, мы начнем с базы!',
     },
     {
-        '/MokembaMascot/hello.png': 'Тестик 3, раз раз?'
+        '/MokembaMascot/htmloneee.png': 'ахуеть'
     },
     {
         '/MokembaMascot/vpotoke.png': 'ну... я доделал это алгоритм более менее только спустя 5 дней...'

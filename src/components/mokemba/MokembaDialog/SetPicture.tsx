@@ -10,5 +10,5 @@ export function SetPicture({ arrContent }: Props) {
     useEffect(() => {
         setState(Object.entries(arrContent)[0][0])
     }, [arrContent])
-    return <Image src={state} alt="" width={300} height={300} />
+    return <Image src={state} alt="" width={500} height={300} />
 }
