@@ -3,7 +3,7 @@ import { PageLayout } from '@/components/layout/PageLayout/PageLayout'
 
 export default function Home() {
     return (
-        <PageLayout nav={true}>
+        <PageLayout mode='menu'>
             <Main />
         </PageLayout>
     )

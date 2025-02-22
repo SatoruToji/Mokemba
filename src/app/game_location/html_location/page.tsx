@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Page() {
     return (
-        <PageLayout nav={true} style={{ html: true }}>
+        <PageLayout mode='menu' style={{ html: true }}>
             <main>
                 <Link href="./html_location/base">
                     <Button value="Base" style={{ main: true }} tooltip='Механики, которые ты обязан(а) знать'/>

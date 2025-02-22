@@ -11,7 +11,7 @@ export function Nav() {
                         target="_blank"
                     >
                         слепая печать
-                    </a>
+                    </a> 
                 </li>
                 <li>
                     <Button

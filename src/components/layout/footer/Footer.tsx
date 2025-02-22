@@ -1,4 +1,4 @@
-import { foo } from '@/components/mokemba/MokembaDialog/foo'
+import { foo } from '@/components/mokemba/MokembaDialog/translateText'
 import { myContext } from '@/components/mokemba/Provider'
 import { useContext, Dispatch, SetStateAction } from 'react'
 

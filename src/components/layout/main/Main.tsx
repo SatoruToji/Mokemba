@@ -17,7 +17,7 @@ export function Main() {
                     style={{ main: true }}
                     tooltip="Web это не интернет"
                 />
-            </Link>
+            </Link> 
         </main>
     )
 }

@@ -1,49 +1,53 @@
 'use client'
 import { JSX, useState } from 'react'
+import { HandleTooltip } from './decomposition/HandleTooltip'
+import { HandleDetails } from './decomposition/HandleDetails'
+import { BackButton } from './decomposition/HandleBackButton'
+import { BodyButton } from './decomposition/BodyButton'
 
 interface ButtonProps {
     value?: string
-    main?: boolean
     style?: {
         main?: boolean
         nav?: boolean
     }
     tooltip?: string
     details?: JSX.Element
+    back?: boolean
 }
 
-export function Button({ value, style, tooltip, details }: ButtonProps) {
+export function Button({ value, style, tooltip, details, back }: ButtonProps) {
     const [show, setShow] = useState({
         tooltip: false,
         details: false,
     })
+
+    const handleToggleDetails = () =>
+        setShow((p) => ({ ...p, details: !p.details }))
+    const handleMouseEnter = () => setShow((p) => ({ ...p, tooltip: true }))
+    const handleMouseLeave = () => setShow((p) => ({ ...p, tooltip: false }))
+
     return (
         <div className="relative">
-            <button
-                className={`${
-                    style?.main
-                        ? 'w-20 aspect-square bg-foreground text-white hover:bg-grey'
-                        : ''
-                }
-            ${style?.nav ? 'hover:text-grey' : ''} hover:rounded-sm`}
-                onClick={() => setShow((p) => ({ ...p, details: !p.details }))}
-                onMouseEnter={() => setShow((p) => ({ ...p, tooltip: true }))}
-                onMouseLeave={() => setShow((p) => ({ ...p, tooltip: false }))}
-            >
-                {value}
-            </button>
-            {tooltip ? (
-                show.tooltip ? (
-                    <span className="absolute left-1/2 -translate-x-1/2 top-full">
-                        {tooltip}
-                    </span>
-                ) : undefined
-            ) : undefined}
-            {details ? (
-                show.details ? (
-                    <div className="absolute">{details}</div>
-                ) : null
-            ) : null}
+            <BodyButton
+                value={value ? value : ''}
+                style={style}
+                onClick={handleToggleDetails}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+            />
+
+            <HandleTooltip
+                isShow={show.tooltip ? show.tooltip : false}
+                tooltip={tooltip ? tooltip : ''}
+            />
+
+            <HandleDetails
+                isShow={show.details}
+                details={details ? details : <></>}
+            />
+
+            <BackButton isShow={back ? back : false} />
         </div>
     )
 }
