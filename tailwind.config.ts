@@ -11,7 +11,11 @@ export default {
             colors: {
                 white: 'var(--white)',
                 grey: 'var(--grey)',
+                darkedGrey: 'var(--darked-grey)',
                 foreground: 'var(--foreground)',
+                html: 'var(--html)',
+                js: 'var(--js)',
+                css: 'var(--css)',
             },
         },
     },

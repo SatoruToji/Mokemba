@@ -18,7 +18,7 @@ export function Nav() {
                         value="ur Lvl"
                         style={{ nav: true }}
                         details={
-                            <div className="absolute   flex flex-col p-3 gap-y-3 bg-[dimgray] rounded-sm">
+                            <div className="absolute flex flex-col p-3 gap-y-3 bg-[dimgray] rounded-sm">
                                 <Link href="/game_location/html_location" className='hover:text-black'>
                                     HTML
                                 </Link>
@@ -39,6 +39,8 @@ export function Nav() {
                     >
                         GitHub
                     </a>
+                </li>
+                <li>
                 </li>
             </ul>
         </nav>

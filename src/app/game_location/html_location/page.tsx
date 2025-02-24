@@ -4,27 +4,10 @@ import Link from 'next/link'
 
 export default function Page() {
     return (
-        <PageLayout mode='menu' style={{ html: true }}>
-            <main>
-                <Link href="./html_location/base">
-                    <Button value="Base" style={{ main: true }} tooltip='Механики, которые ты обязан(а) знать'/>
+        <PageLayout mode='menu' style={{ html: true }} >
+                <Link href="./html_location/link">
+                    <Button value="<a>" style={{ main: true }} tooltip='Попрактикуешься создавать ссылки'/>
                 </Link>
-                <Link href="">
-                    <Button value="<a>" style={{ main: true }} tooltip='Сылки'/>
-                </Link>
-                <Link href="">
-                    <Button value="<div>" style={{ main: true }} tooltip='Универсальный тег!'/>
-                </Link>
-                <Link href="">
-                    <Button value="ul/li" style={{ main: true }} />
-                </Link>
-                <Link href="">
-                    <Button value="table" style={{ main: true }} />
-                </Link>
-                <Link href="">
-                    <Button value="button" style={{ main: true }} />
-                </Link>
-            </main>
         </PageLayout>
     )
 }

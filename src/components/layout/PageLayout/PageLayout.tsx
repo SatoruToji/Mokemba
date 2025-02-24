@@ -9,6 +9,8 @@ import { ReactNode } from 'react'
 interface props {
     style?: {
         html?: boolean
+        js?: boolean
+        css?: boolean
     }
     children?: ReactNode
     nav?: boolean
@@ -19,11 +21,13 @@ export function PageLayout({ children, style, mode }: props) {
     return (
         <div
             className={`min-h-screen grid grid-rows-[10%_80%_10%] ${
-                style?.html ? 'bg-orange-200' : ''
-            }`}
+                style?.html ? 'bg-html' : ''
+            } ${style?.js ? 'bg-js' : ''} ${style?.css ? 'bg-css' : ''}`}
         >
             <MyProvider>
-                <Header>{mode === 'menu' ? <Nav /> : <Button back={true}/>}</Header>
+                <Header>
+                    {mode === 'menu' ? <Nav /> : <Button back={true} />}
+                </Header>
                 <main>{children}</main>
                 <Footer />
             </MyProvider>

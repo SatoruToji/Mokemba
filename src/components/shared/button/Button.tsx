@@ -38,6 +38,7 @@ export function Button({ value, style, tooltip, details, back }: ButtonProps) {
             />
 
             <HandleTooltip
+                style={style}
                 isShow={show.tooltip ? show.tooltip : false}
                 tooltip={tooltip ? tooltip : ''}
             />

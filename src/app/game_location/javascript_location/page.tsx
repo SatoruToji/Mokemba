@@ -1,5 +1,7 @@
+import { PageLayout } from "@/components/layout/PageLayout/PageLayout";
+
 export default function Page() {
-    return <div>
-        its still empty
-    </div>
+    return <PageLayout mode="menu" style={{ js: true}}>
+
+    </PageLayout>
 }

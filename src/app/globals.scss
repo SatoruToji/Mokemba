@@ -4,8 +4,13 @@
 
 :root {
     --white: #e0e0e0;
-    --grey: #808080;
+    --grey: #404040;
+    --darked-grey: #252525;
     --foreground: #222;
+    --test: polygon(0 64%, 31% 64%, 47% 53%, 63% 65%, 100% 65%, 100% 100%, 0 100%);
+    --html: #d9663d;
+    --js: #fff6b0;
+    --css: #3c74b6;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -49,4 +54,11 @@ a {
         color: var(--grey);
         text-decoration: underline;
     }
+}
+
+.tooltip_form {
+    // clip-path: polygon(0 64%, 31% 64%, 47% 53%, 63% 65%, 100% 65%, 100% 100%, 0 100%);
+    // clip-path: polygon(0 35%, 29% 35%, 49% 18%, 66% 34%, 100% 34%, 100% 100%, 0 100%);
+    // clip-path: polygon(0 20%, 34% 20%, 52% 10%, 66% 21%, 100% 21%, 100% 100%, 0 100%);
+    // clip-path: polygon(0 20%, 35% 20%, 50% 0, 65% 20%, 100% 20%, 100% 100%, 0 100%);
 }
