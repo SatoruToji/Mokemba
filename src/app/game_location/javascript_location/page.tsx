@@ -12,6 +12,13 @@ export default function Page() {
                     tooltip="Понятным языком объясню this"
                 />
             </Link>
+            <Link href={'./javascript_location/prototype'}>
+                <Button
+                    value="prototype"
+                    style={{ main: true }}
+                    tooltip="Почти все в js - это объекты."
+                />
+            </Link>
         </PageLayout>
     )
 }
