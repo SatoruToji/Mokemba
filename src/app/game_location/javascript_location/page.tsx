@@ -19,6 +19,13 @@ export default function Page() {
                     tooltip="Почти все в js - это объекты."
                 />
             </Link>
+            <Link href={'./javascript_location/undefined'}>
+                <Button
+                    value="undefined"
+                    style={{ main: true }}
+                    tooltip="Разница Undefined от Null."
+                />
+            </Link>
         </PageLayout>
     )
 }
