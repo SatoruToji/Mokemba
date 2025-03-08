@@ -26,6 +26,13 @@ export default function Page() {
                     tooltip="Разница Undefined от Null."
                 />
             </Link>
+            <Link href={'./javascript_location/classes'}>
+                <Button
+                    value="class"
+                    style={{ main: true }}
+                    tooltip="разжую тебе термины"
+                />
+            </Link>
         </PageLayout>
     )
 }
