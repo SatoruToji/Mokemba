@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 
 interface Props {
     arrContent: Record<string, string>
@@ -7,7 +7,7 @@ interface Props {
 
 export function SetPicture({ arrContent }: Props) {
     const [state, setState] = useState<string>('/MokembaMascot/hello.png')
-    useEffect(() => {
+    useLayoutEffect(() => {
         setState(Object.entries(arrContent)[0][0])
     }, [arrContent])
     return (

@@ -4,7 +4,7 @@ import {
     Dispatch,
     SetStateAction,
     useContext,
-    useEffect,
+    useLayoutEffect,
     useState,
 } from 'react'
 import { SetPicture } from './SetPicture'
@@ -34,7 +34,7 @@ export function MokembaClick({ arrObject }: Props) {
         }))
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         setState(arrObject[data.index])
     }, [data.index, setState, arrObject])
 
